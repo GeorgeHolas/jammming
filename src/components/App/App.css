@@ -1,0 +1,112 @@
+body,
+html,
+#root {
+  height: 100%;
+}
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  padding: 1.5rem 0;
+  background-color: rgba(0, 0, 0, 0.966);
+  text-align: center;
+  font-family: 'Bungee Inline';
+  color: #fff;
+  font-size: calc(40px + 6vh);
+  line-height: calc(10px + 4vh);
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    color: #fccaff; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px  #a13206ef, 0 0 40px  #a13206ef, 0 0 60px #ff0000, 0 0 10px  #a13206ef, 0 0 98px #ff0000;
+    animation: blink 6s infinite;
+    -webkit-animation: blink 6s infinite;
+  }
+
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow:  #a13206ef;
+      color: #fdfdfb;
+      
+    }
+  }
+  
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+      
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow:  #a13206ef;
+      color: #dfdfd9;
+    }
+  }
+  
+
+
+h1 .highlight {
+  color: #a13206ef;
+}
+
+h2 {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 1.55rem;
+}
+
+.App {
+  height: 100%;
+  padding: 0 17% 10% 17%;
+  background-image: url('./background_photo_desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family:'Sacramento', cursive;
+  font-weight: 500;
+  color: rgb(221, 212, 212);
+  
+}
+
+.App-playlist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1020px) {
+  .App-playlist {
+    align-items: center;
+    flex-direction: column;
+  }
+}
