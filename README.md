@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Jamming is an react app where you can save your playslit in Spotify
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
