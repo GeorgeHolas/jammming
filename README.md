@@ -1,74 +1,71 @@
-# Jamming is an react app where you can save your playslit in Spotify
+# Spotify Playlist Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a simple Spotify playlist manager that allows users to search for songs on Spotify, add them to a playlist, and save the playlist to their Spotify account.
 
-In the project directory, you can run:
+## Components
 
-### `npm start`
+### `App.js`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is the main `App` component that contains the core UI and logic for the application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Functions:
 
-### `npm test`
+- `addTrack(trackId)`: Adds a track to the playlist when the user selects it.
+- `removeTrack(trackId)`: Removes a track from the playlist.
+- `savePlaylist(playlistName, trackURIs)`: Saves the current playlist to the user's Spotify account.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Components:
 
-### `publish directory`
+- `SearchBar`: Search input to find songs on Spotify.
+- `SearchResults`: Displays a list of songs returned from the search.
+- `Playlist`: Displays a list of songs added to the playlist.
 
-Publish directory: build/
+### `Spotify.js`
 
-### `npm run build`
+This file contains helper methods for interacting with the Spotify API.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Methods:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `getAccessToken()`: Gets an access token for the Spotify API. Handles token expiration and refresh.
+- `search(query)`: Searches the Spotify library for tracks based on a query term. Returns an array of track objects containing id, name, artist, album, etc.
+- `savePlaylist(playlistName, trackURIs)`: Saves a playlist with a given name and list of track URIs to the user's Spotify account.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dependencies
 
-### `npm run eject`
+- Spotify API client credentials and OAuth configuration.
+- `fetch` API for making requests.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Setup Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/spotify-playlist-manager.git
+## Navigate into the project directory:
+sh
+Copy code
+cd jammming - REACT APP
+cd jammming
+### Install dependencies
+- npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Start the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- npm start
+- Open the application in your browser at http://localhost:3000.
+- Usage Enter a search term in the SearchBar component to search for songs on Spotify.
+- View the search results in the SearchResults component and click "Add" to add a song to the playlist.
+- Manage your playlist in the Playlist component by removing songs or rearranging the order.
+- When you're ready, click "Save Playlist" to save your playlist to your Spotify account.
+ 
+### Contributing
+I welcome contributions! If you'd like to contribute to this project, please follow these steps:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Make your changes and commit them (git commit -am 'Add new feature').
+Push to the branch (git push origin feature/your-feature).
+Create a new Pull Request.
+Contact
+If you have any questions or suggestions, please feel free to reach out!
