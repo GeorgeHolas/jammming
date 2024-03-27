@@ -58,6 +58,7 @@ cd jammming
 - View the search results in the SearchResults component and click "Add" to add a song to the playlist.
 - Manage your playlist in the Playlist component by removing songs or rearranging the order.
 - When you're ready, click "Save Playlist" to save your playlist to your Spotify account.
+- Or here https://jammmingreactapp.netlify.app
  
 ### Contributing
 I welcome contributions! If you'd like to contribute to this project, please follow these steps:
